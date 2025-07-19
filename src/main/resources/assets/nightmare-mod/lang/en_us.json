@@ -1,0 +1,25 @@
+{
+  "item.nightmare-mod.magnetite": "Magnetite",
+  "item.nightmare-mod.raw_magnetite": "Raw Magnetite",
+  "item.nightmare-mod.nocturno_heart_scrap": "Nocturno Heart Scrap",
+
+  "block.nightmare-mod.magnetite_block": "Block of Magnetite",
+  "block.nightmare-mod.raw_magnetite_block": "Block of Raw Magnetite",
+  "block.nightmare-mod.nocturno_heart": "Nocturno's Heart",
+  "block.nightmare-mod.boss_pedestal": "Boss Pedestal",
+
+  "block.nightmare-mod.magnetite_ore": "Magnetite Ore",
+
+  "item.nightmare-mod.nightmare_armor_trim_smithing_template": "Nightmare Smithing Template",
+
+  "trim_material.nightmare-mod.magnetite": "Magnetite",
+  "trim_pattern.nightmare-mod.nightmare": "Nightmare Armor Pattern",
+
+  "entity.nightmare-mod.lurker": "Lurker",
+  "entity.nightmare-mod.scorching_skeleton": "Scorching Skeleton",
+  "entity.nightmare-mod.treant": "Treant",
+  "entity.nightmare-mod.shadowbane": "Shadowbane",
+  "entity.nightmare-mod.shadow": "Shadow",
+  "entity.nightmare-mod.mininocturno": "Mini Nocturno",
+  "entity.nightmare-mod.nocturno": "Nocturno"
+}

@@ -1,0 +1,29 @@
+{
+  "criteria": {
+    "got_heart_noc": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nightmare-mod:nocturno_heart"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": "A collecter's item",
+    "icon": {
+      "count": 1,
+      "id": "nightmare-mod:nocturno_heart"
+    },
+    "title": "Heart of a Beast"
+  },
+  "requirements": [
+    [
+      "got_heart_noc"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "nightmare-mod:magnetite_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "nightmare-mod:magnetite"
+  }
+}
