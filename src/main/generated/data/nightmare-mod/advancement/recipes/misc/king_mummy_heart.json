@@ -1,0 +1,43 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_king_mummy_heart_fragment": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nightmare-mod:king_mummy_heart_fragment"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_sand": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:sand"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nightmare-mod:king_mummy_heart"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_king_mummy_heart_fragment",
+      "has_sand"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nightmare-mod:king_mummy_heart"
+    ]
+  }
+}

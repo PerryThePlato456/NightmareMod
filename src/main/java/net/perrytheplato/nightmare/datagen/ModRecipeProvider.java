@@ -3,6 +3,7 @@ package net.perrytheplato.nightmare.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.data.recipe.*;
+import net.minecraft.item.Items;
 import net.minecraft.item.equipment.trim.ArmorTrimPattern;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.RegistryKeys;
@@ -24,8 +25,8 @@ import net.minecraft.util.Identifier;
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
-import static net.perrytheplato.nightmare.item.ModItems.NIGHTMARE_SMITHING_TEMPLATE;
-import static net.perrytheplato.nightmare.item.ModItems.NOCTURNO_HEART_SCRAP;
+import static net.minecraft.item.Items.SAND;
+import static net.perrytheplato.nightmare.item.ModItems.*;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
     public ModRecipeProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
@@ -55,6 +56,24 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .criterion(hasItem(ModItems.RAW_MAGNETITE), conditionsFromItem(ModItems.RAW_MAGNETITE))
                         .offerTo(exporter);
 
+
+                createShaped(RecipeCategory.MISC, ModBlocks.NOCTURNO_HEART)
+                        .pattern("RRR")
+                        .pattern("RRR")
+                        .pattern("RRR")
+                        .input('R', ModItems.NOCTURNO_HEART_SCRAP)
+                        .criterion(hasItem(ModItems.NOCTURNO_HEART_SCRAP), conditionsFromItem(NOCTURNO_HEART_SCRAP))
+                        .offerTo(exporter);
+
+                createShaped(RecipeCategory.MISC, ModBlocks.KING_MUMMY_HEART)
+                        .pattern("RRR")
+                        .pattern("RSR")
+                        .pattern("RRR")
+                        .input('R', ModItems.KING_MUMMY_HEART_FRAGMENT)
+                        .input('S', SAND)
+                        .criterion(hasItem(ModItems.KING_MUMMY_HEART_FRAGMENT), conditionsFromItem(KING_MUMMY_HEART_FRAGMENT))
+                        .criterion(hasItem(SAND), conditionsFromItem(SAND))
+                        .offerTo(exporter);
 
                 createShaped(RecipeCategory.MISC, ModBlocks.NOCTURNO_HEART)
                         .pattern("RRR")

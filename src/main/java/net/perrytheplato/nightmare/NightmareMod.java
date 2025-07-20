@@ -54,6 +54,17 @@ public class NightmareMod implements ModInitializer {
 				ShadowModel.SHADOW,
 				ShadowModel::getTexturedModelData
 		);
+		EntityModelLayerRegistry.registerModelLayer(
+				MummyModel.MUMMY,
+				MummyModel::getTexturedModelData
+
+		);
+		EntityModelLayerRegistry.registerModelLayer(
+				KingMummyModel.KINGMUMMY,
+				KingMummyModel::getTexturedModelData
+
+		);
+
 
 
 		EntityModelLayerRegistry.registerModelLayer(
@@ -73,6 +84,9 @@ public class NightmareMod implements ModInitializer {
 		EntityRendererRegistry.register(ModEntities.TREANT, TreantRenderer::new);
 		EntityRendererRegistry.register(ModEntities.SHADOWBANE, ShadowbaneRenderer::new);
 		EntityRendererRegistry.register(ModEntities.SHADOW, ShadowRenderer::new);
+		EntityRendererRegistry.register(ModEntities.SHADOW, ShadowRenderer::new);
+		EntityRendererRegistry.register(ModEntities.MUMMY, MummyRenderer::new);
+		EntityRendererRegistry.register(ModEntities.KINGMUMMY, KingMummyRenderer::new);
 		EntityRendererRegistry.register(ModEntities.MININOCTURNO, MiniNocturnoRenderer::new);
 		EntityRendererRegistry.register(ModEntities.NOCTURNO, NocturnoRenderer::new);
 
@@ -90,6 +104,8 @@ public class NightmareMod implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.TREANT, TreantEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.SHADOWBANE, ShadowbaneEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.SHADOW, ShadowEntity.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.MUMMY, MummyEntity.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.KINGMUMMY, KingMummyEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.MININOCTURNO, MiniNocturnoEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.NOCTURNO, NocturnoEntity.createMobAttributes());
 		ModWorldGeneration.generateModWorldGen();

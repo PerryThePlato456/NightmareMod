@@ -23,6 +23,7 @@ public class  ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RAW_MAGNETITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.MAGNETITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.NOCTURNO_HEART);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.KING_MUMMY_HEART);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.BOSS_PEDESTAL);
     }
 
@@ -30,6 +31,7 @@ public class  ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.MAGNETITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.NOCTURNO_HEART_SCRAP, Models.GENERATED);
+        itemModelGenerator.register(ModItems.KING_MUMMY_HEART_FRAGMENT, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_MAGNETITE, Models.GENERATED);
         itemModelGenerator.register(ModItems.NIGHTMARE_SMITHING_TEMPLATE, Models.GENERATED);
 

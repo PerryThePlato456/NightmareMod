@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "nightmare-mod:block/king_mummy_heart"
+  }
+}

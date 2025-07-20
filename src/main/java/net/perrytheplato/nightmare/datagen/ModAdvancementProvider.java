@@ -46,7 +46,4 @@ public class ModAdvancementProvider  extends FabricAdvancementProvider {
                 .build(consumer, NightmareMod.MOD_ID + ":got_heart_noc");
 
 
-
-
-
 }}

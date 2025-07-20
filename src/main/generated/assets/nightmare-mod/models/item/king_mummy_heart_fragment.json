@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "nightmare-mod:item/king_mummy_heart_fragment"
+  }
+}

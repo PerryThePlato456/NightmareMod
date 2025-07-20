@@ -2,6 +2,7 @@ package net.perrytheplato.nightmare.world.gen;
 
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.*;
 import net.minecraft.entity.mob.HostileEntity;
 import net.minecraft.entity.mob.MobEntity;
@@ -13,6 +14,8 @@ import net.perrytheplato.nightmare.NightmareMod;
 import net.perrytheplato.nightmare.entity.ModEntities;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.BiomeKeys;
+import net.perrytheplato.nightmare.block.ModBlocks;
+import net.perrytheplato.nightmare.entity.custom.MummyEntity;
 
 public class ModEntitySpawns {
 
@@ -20,6 +23,10 @@ public class ModEntitySpawns {
         return MobEntity.canMobSpawn(type, worldAccess, reason, pos, random)
                 && worldAccess.toServerWorld().isNight();
     }
+    public static boolean canSpawnLight(EntityType<? extends MobEntity> type, ServerWorldAccess worldAccess, SpawnReason reason, BlockPos pos, Random random) {
+        return worldAccess.getLightLevel(pos) <= 7 && worldAccess.getBlockState(pos.down()).isSolid();
+    }
+
 
 
 
@@ -69,10 +76,26 @@ public class ModEntitySpawns {
 
 
 
+
+
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(BiomeKeys.DESERT),
+                SpawnGroup.MONSTER, ModEntities.MUMMY, 30, 1, 3);
+
+        SpawnRestriction.register(ModEntities.MUMMY, SpawnLocationTypes.ON_GROUND,
+                Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, ModEntitySpawns::canSpawnLight
+        );
+
+
+
+
         NightmareMod.LOGGER.info("Spawning");
 
 
 }
+
+
+
+
 
 
 }

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": "nightmare-mod:king_mummy_heart_fragment",
+    "S": "minecraft:sand"
+  },
+  "pattern": [
+    "RRR",
+    "RSR",
+    "RRR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "nightmare-mod:king_mummy_heart"
+  }
+}

@@ -6,6 +6,8 @@
   "block.nightmare-mod.magnetite_block": "Block of Magnetite",
   "block.nightmare-mod.raw_magnetite_block": "Block of Raw Magnetite",
   "block.nightmare-mod.nocturno_heart": "Nocturno's Heart",
+  "item.nightmare-mod.king_mummy_heart_fragment": "Pharoah Heart Fragment",
+  "block.nightmare-mod.king_mummy_heart": "Pharoah's Heart",
   "block.nightmare-mod.boss_pedestal": "Boss Pedestal",
 
   "block.nightmare-mod.magnetite_ore": "Magnetite Ore",
@@ -21,5 +23,7 @@
   "entity.nightmare-mod.shadowbane": "Shadowbane",
   "entity.nightmare-mod.shadow": "Shadow",
   "entity.nightmare-mod.mininocturno": "Mini Nocturno",
-  "entity.nightmare-mod.nocturno": "Nocturno"
+  "entity.nightmare-mod.nocturno": "Nocturno",
+  "entity.nightmare-mod.mummy": "Mummy",
+  "entity.nightmare-mod.kingmummy": "Pharoah"
 }
