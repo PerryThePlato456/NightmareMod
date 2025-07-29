@@ -24,7 +24,8 @@ public class ModEntitySpawns {
                 && worldAccess.toServerWorld().isNight();
     }
     public static boolean canSpawnLight(EntityType<? extends MobEntity> type, ServerWorldAccess worldAccess, SpawnReason reason, BlockPos pos, Random random) {
-        return worldAccess.getLightLevel(pos) <= 7 && worldAccess.getBlockState(pos.down()).isSolid();
+        return worldAccess.getLightLevel(pos) <= 7
+                && worldAccess.getBlockState(pos.down()).isSolidBlock(worldAccess, pos.down());
     }
 
 
