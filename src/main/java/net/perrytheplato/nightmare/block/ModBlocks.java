@@ -30,6 +30,8 @@ public static final Block MAGNETITE_BLOCK = registerBlock("magnetite_block", new
         return Registry.register(Registries.BLOCK, Identifier.of(NightmareMod.MOD_ID, name), block);
     }
 
+    public static final Block WAYSTONE_BLOCK = new Block(FabricBlockSettings.of(Material.STONE).strength(4.0f));
+
     private static void registerBlockItem(String name, Block block) {
         Registry.register(Registries.ITEM, Identifier.of(NightmareMod.MOD_ID, name), new BlockItem(block, new Item.Settings().registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(NightmareMod.MOD_ID, name))).useBlockPrefixedTranslationKey()));
     }
