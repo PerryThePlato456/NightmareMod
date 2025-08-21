@@ -1,7 +1,6 @@
 package net.perrytheplato.nightmare.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.SmithingTemplateItem;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.perrytheplato.nightmare.NightmareMod;

@@ -15,7 +15,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import net.perrytheplato.nightmare.ChasePlayerGoal;
-import net.perrytheplato.nightmare.entity.client.ShadowAnimations;
+import net.perrytheplato.nightmare.entity.client.shadow.ShadowAnimations;
 import net.perrytheplato.nightmare.item.ModItems;
 
 public class KingMummyEntity extends HostileEntity {

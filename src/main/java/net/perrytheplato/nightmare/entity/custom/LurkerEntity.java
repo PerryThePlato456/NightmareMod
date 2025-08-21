@@ -1,9 +1,6 @@
 package net.perrytheplato.nightmare.entity.custom;
 
-import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.*;
-import net.minecraft.entity.EntityDimensions;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.ai.goal.*;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.mob.HostileEntity;

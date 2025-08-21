@@ -4,17 +4,30 @@ import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.minecraft.registry.Registry;
-import net.minecraft.registry.RegistryKey;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.util.Identifier;
-import net.minecraft.world.Heightmap;
-import net.minecraft.world.gen.structure.JigsawStructure;
-import net.minecraft.world.gen.structure.Structure;
-import net.minecraft.world.gen.structure.StructureType;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.util.ActionResult;
 import net.perrytheplato.nightmare.block.ModBlocks;
 import net.perrytheplato.nightmare.entity.ModEntities;
-import net.perrytheplato.nightmare.entity.client.*;
+import net.perrytheplato.nightmare.entity.client.kingmummy.KingMummyModel;
+import net.perrytheplato.nightmare.entity.client.kingmummy.KingMummyRenderer;
+import net.perrytheplato.nightmare.entity.client.lurker.LurkerModel;
+import net.perrytheplato.nightmare.entity.client.lurker.LurkerRenderer;
+import net.perrytheplato.nightmare.entity.client.mininocturno.MiniNocturnoModel;
+import net.perrytheplato.nightmare.entity.client.mininocturno.MiniNocturnoRenderer;
+import net.perrytheplato.nightmare.entity.client.mummy.MummyModel;
+import net.perrytheplato.nightmare.entity.client.mummy.MummyRenderer;
+import net.perrytheplato.nightmare.entity.client.nightmare.shadow.NightmareModel;
+import net.perrytheplato.nightmare.entity.client.nightmare.shadow.NightmareRenderer;
+import net.perrytheplato.nightmare.entity.client.nocturno.NocturnoModel;
+import net.perrytheplato.nightmare.entity.client.nocturno.NocturnoRenderer;
+import net.perrytheplato.nightmare.entity.client.scorchingskeleton.ScorchingSkeletonModel;
+import net.perrytheplato.nightmare.entity.client.scorchingskeleton.ScorchingSkeletonRenderer;
+import net.perrytheplato.nightmare.entity.client.shadow.ShadowModel;
+import net.perrytheplato.nightmare.entity.client.shadow.ShadowRenderer;
+import net.perrytheplato.nightmare.entity.client.shadowbane.ShadowbaneModel;
+import net.perrytheplato.nightmare.entity.client.shadowbane.ShadowbaneRenderer;
+import net.perrytheplato.nightmare.entity.client.treant.TreantModel;
+import net.perrytheplato.nightmare.entity.client.treant.TreantRenderer;
 import net.perrytheplato.nightmare.entity.custom.*;
 import net.perrytheplato.nightmare.event.SpawnOnPlacement;
 import net.perrytheplato.nightmare.item.ModItems;
@@ -54,6 +67,12 @@ public class NightmareMod implements ModInitializer {
 				ShadowModel.SHADOW,
 				ShadowModel::getTexturedModelData
 		);
+
+		EntityModelLayerRegistry.registerModelLayer(
+				NightmareModel.NIGHTMARE,
+				NightmareModel::getTexturedModelData
+		);
+
 		EntityModelLayerRegistry.registerModelLayer(
 				MummyModel.MUMMY,
 				MummyModel::getTexturedModelData
@@ -78,6 +97,8 @@ public class NightmareMod implements ModInitializer {
 		);
 
 
+
+
 		// Then register the renderer
 		EntityRendererRegistry.register(ModEntities.LURKER, LurkerRenderer::new);
 		EntityRendererRegistry.register(ModEntities.SCORCHING_SKELETON, ScorchingSkeletonRenderer::new);
@@ -89,6 +110,7 @@ public class NightmareMod implements ModInitializer {
 		EntityRendererRegistry.register(ModEntities.KINGMUMMY, KingMummyRenderer::new);
 		EntityRendererRegistry.register(ModEntities.MININOCTURNO, MiniNocturnoRenderer::new);
 		EntityRendererRegistry.register(ModEntities.NOCTURNO, NocturnoRenderer::new);
+		EntityRendererRegistry.register(ModEntities.NIGHTMARE, NightmareRenderer::new);
 
 
 
@@ -100,6 +122,7 @@ public class NightmareMod implements ModInitializer {
 
 
 		FabricDefaultAttributeRegistry.register(ModEntities.LURKER, LurkerEntity.createMobAttributes());
+		FabricDefaultAttributeRegistry.register(ModEntities.NIGHTMARE, NightmareEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.SCORCHING_SKELETON, ScorchingSkeletonEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.TREANT, TreantEntity.createMobAttributes());
 		FabricDefaultAttributeRegistry.register(ModEntities.SHADOWBANE, ShadowbaneEntity.createMobAttributes());

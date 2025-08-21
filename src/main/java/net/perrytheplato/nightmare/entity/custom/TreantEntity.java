@@ -16,7 +16,7 @@ import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.world.World;
 import net.perrytheplato.nightmare.ChasePlayerGoal;
-import net.perrytheplato.nightmare.entity.client.TreantAnimations;
+import net.perrytheplato.nightmare.entity.client.treant.TreantAnimations;
 import net.perrytheplato.nightmare.item.ModItems;
 
 public class TreantEntity extends HostileEntity {

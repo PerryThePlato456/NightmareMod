@@ -1,6 +1,5 @@
 package net.perrytheplato.nightmare.entity.custom;
 
-import net.minecraft.advancement.Advancement;
 import net.minecraft.advancement.AdvancementEntry;
 import net.minecraft.client.render.entity.animation.AnimationDefinition;
 import net.minecraft.entity.*;
@@ -20,7 +19,7 @@ import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.World;
 import net.perrytheplato.nightmare.ChasePlayerGoal;
-import net.perrytheplato.nightmare.entity.client.TreantAnimations;
+import net.perrytheplato.nightmare.entity.client.treant.TreantAnimations;
 import net.perrytheplato.nightmare.item.ModItems;
 
 import java.util.Objects;

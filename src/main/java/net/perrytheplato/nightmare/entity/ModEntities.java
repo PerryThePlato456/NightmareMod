@@ -33,6 +33,11 @@ public class ModEntities {
             Identifier.of(NightmareMod.MOD_ID, "shadow")
     );
 
+    public static final RegistryKey<EntityType<?>> NIGHTMARE_KEY = RegistryKey.of(
+            Registries.ENTITY_TYPE.getKey(),
+            Identifier.of(NightmareMod.MOD_ID, "nightmare")
+    );
+
     public static final RegistryKey<EntityType<?>> MININOCTURNO_KEY = RegistryKey.of(
             Registries.ENTITY_TYPE.getKey(),
             Identifier.of(NightmareMod.MOD_ID, "mininocturno")
@@ -73,6 +78,11 @@ public class ModEntities {
             Identifier.of(NightmareMod.MOD_ID, "shadow"),
             EntityType.Builder.create(ShadowEntity::new, SpawnGroup.MONSTER)
                     .dimensions(0.6f, 2f).build(SHADOW_KEY));
+
+    public static final EntityType<NightmareEntity> NIGHTMARE = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(NightmareMod.MOD_ID, "nightmare"),
+            EntityType.Builder.create(NightmareEntity::new, SpawnGroup.MONSTER)
+                    .dimensions(0.6f, 2f).build(NIGHTMARE_KEY));
 
 
     public static final EntityType<MiniNocturnoEntity> MININOCTURNO = Registry.register(Registries.ENTITY_TYPE,

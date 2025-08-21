@@ -14,7 +14,6 @@ import net.perrytheplato.nightmare.trim.ModTrimPatterns;
 import net.perrytheplato.nightmare.NightmareMod;
 import net.perrytheplato.nightmare.block.ModBlocks;
 import net.perrytheplato.nightmare.item.ModItems;
-import net.minecraft.data.recipe.RecipeExporter;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
